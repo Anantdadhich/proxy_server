@@ -1,0 +1,19 @@
+{
+  "name": "inducedai-takehome",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-rate-limit": "^6.0.2",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0"
+  }
+}
