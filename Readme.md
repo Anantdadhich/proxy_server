@@ -1,9 +1,11 @@
 # Rate Limiting Proxy API - Take Home Assignment
 
-This application is based on the user based authentication and rate limiting for api requests
+This application is based on the  rate limiting for third party api requests like when we use github api. so we can limit our api to prevent the server from crash 
+Uses queue and rate limit like algo(sliding window ) to slow down the requests in our application not on server 
 
-As we know rate limit works om the application rather than the server
+As we know rate limit works om the application rather than the server.
 
+## Endpoints feature 
 - Allow user to register with jwt based system
 - Create app with rate limits
 - proxy requests to external api
@@ -26,20 +28,22 @@ git clone https://github.com/Anantdadhich/proxy_server
 
 Install Dependencies:
 
-npm install
+- npm install
 
 Setup Environment Variables:
 
 Create a .env file in the root directory and add the following:
 
-JWT_SECRET=your_secret_key
-DATABASE_URL=your_database_url
+- JWT_SECRET=your_secret_key
+ - DATABASE_URL=your_database_url
 
 Run Database Migrations:
 
-npx prisma migrate dev
+ - npx prisma migrate dev
 
 Start the Server:
+
+- npm run start
 
 ## API Endpoints
 
@@ -111,8 +115,21 @@ timewindow: Time period for the rate limit in milliseconds.
 
 ---
 
+Got Errors after using Queue Review the code 
+
+
+
 Architecture
 
 ![alt text](image.png)
 
 Screenshots
+![Screenshot 2025-01-09 090815](https://github.com/user-attachments/assets/50b86c2a-4792-46b4-902a-d89d8833bf1a)
+
+
+Got some error while using Queue old ss 
+
+![Screenshot 2025-01-08 100418](https://github.com/user-attachments/assets/d0c663e2-9f1c-426d-9903-328724df9568)
+
+
+
