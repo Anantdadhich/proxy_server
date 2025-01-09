@@ -1,7 +1,6 @@
 import { NextFunction,Request,Response } from "express";
-import jwt from "jsonwebtoken"
-import prisma from "../db/db";
 
+import prisma from "../db/db";
 
 
 export const authenticatapikey=async (req:Request,res:Response,next:NextFunction)=>{
@@ -25,9 +24,8 @@ export const authenticatapikey=async (req:Request,res:Response,next:NextFunction
              return
         }
 
-         const decoded = jwt.verify(apikey as string,  "secret-key");
-         //@ts-ignore
-         req.user = decoded;
+      
+      req.body.userId=user.id;
         next();
     } catch (error) {
          res.status(401).json({message:"invalid api key "})
